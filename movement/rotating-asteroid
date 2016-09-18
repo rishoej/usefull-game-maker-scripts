@@ -1,0 +1,6 @@
+/// Create event - Rotating asteroid
+image_speed = 0;
+image_index = irandom(3); //Pick a random sprite image between 1 and 4.
+
+direction = irandom(360); //Random direction
+speed = 0.1+random(0.5); // Random speed
