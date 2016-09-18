@@ -1,0 +1,32 @@
+/// Step event - Movement
+
+// Rotate left
+if(keyboard_check(vk_left)){
+    image_angle=image_angle+2;
+}
+
+// Rotate right
+if(keyboard_check(vk_right)){
+    image_angle=image_angle-2;
+}
+
+// Move forward
+if(keyboard_check(vk_up)){
+    if(speed >= 1.5){
+        speed = 1.5;
+    } 
+    else{
+        motion_add(image_angle,0.3);
+    }   
+}
+
+// Stop movement
+if(keyboard_check(vk_down)){
+    motion_add(image_angle,0.2);
+    if(speed >= 0.0){
+        speed = 0.0;
+    }
+}
+
+// Slow down speed over time
+speed = max(speed-0.01,0)
