@@ -1,4 +1,4 @@
-/// Step event - Movement
+/// Step event - Player movement
 
 // Rotate left
 if(keyboard_check(vk_left)){
